@@ -1,3 +1,116 @@
-@mainColor: blue;
+@mainColor: orange;
 
 @import "pizza/pizza-card";
+@import "buylist";
+@import "top";
+@import "bottom";
+@import "pizza/pizza-item";
+
+@right-panel-width: 300px;
+@top-label: 78px;
+
+
+.main-pizza{
+  display: flex;
+  min-width: 300px;
+  margin-right: @right-panel-width;
+  padding-top: @top-label;
+
+  .inner-container{
+    width: 100%;
+    margin: auto;
+
+    .inner-container-head{
+      width: 100%;
+      padding: 3%;
+      padding-left: 10%;
+      padding-right:10%;
+
+      .inner-container-head-label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .inner-container-head-label-text{
+          display: inline-block;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .inner-container-head-label-number{
+          display: inline-block;
+          font-size: 10px;
+          margin: 8px;
+          margin-top: 12px;
+          padding: 7px;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          background: orange;
+          color: white;
+          border-color: #be7900;
+          border-radius: 50%;
+        }
+
+      }
+
+      .inner-container-head-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+
+        .inner-container-head-menu-item{
+          display: inline-block;
+          margin: 5px;
+          margin-left: 10px;
+          margin-right: 10px;
+          color: orange;
+          border: none;
+          background: none;
+        }
+
+        .inner-container-head-menu-chosen{
+          color: white;
+          background: orange;
+          padding: 5px;
+          padding-right: 7px;
+          padding-left: 7px;
+          border: solid 1px #e29100;
+          border-radius: 10%;
+        }
+
+
+      }
+
+    }
+
+    .inner-container-body{
+      width: 100%;
+      padding: 5%;
+    }
+
+    .inner-container-bottom{
+      width: 100%;
+      height: 150px;
+      padding: 5%;
+      background: white;
+      border-top: solid 1px #d7d7d7;
+
+      .inner-container-bottom-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+

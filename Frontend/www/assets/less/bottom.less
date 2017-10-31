@@ -1,0 +1,48 @@
+@right-panel-width: 300px;
+@bottom-label: 100px;
+
+.bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: @right-panel-width;
+  height: @bottom-label;
+}
+
+.bottom-flag{
+  height: @bottom-label;
+  width: @bottom-label;
+  margin-left: 15px;
+  background: #EA862E;
+  color: white;
+  font-weight: bold;
+}
+
+.bottom-flag-shape{
+  position: fixed;
+  bottom: @bottom-label;
+  width: @bottom-label;
+  height: @bottom-label/3;
+  margin-left: 15px;
+}
+
+.bottom-flag-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-flag-line{
+  width: 80%;
+  border: dotted 1px #c57f00;
+  margin-left: 10%;
+}
+
+.bottom-flag-discount{
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+

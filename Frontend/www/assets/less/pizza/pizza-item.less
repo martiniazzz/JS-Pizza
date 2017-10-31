@@ -1,0 +1,180 @@
+@button-size:23px;
+@item-height: 110px;
+
+.pizza-item{
+  width: 100%;
+  height: @item-height;
+  background: #f0f0f0;
+  border-bottom: solid 1px #dcdcdc;
+
+  .pizza-item-about{
+    display: inline-block;
+    width: 70%;
+
+    .pizza-item-about-label{
+      display: flex;
+      height: 33%;
+      color: orange;
+      font-size: 15px;
+      margin: 5%;
+      margin-left: 7%;
+
+      .pizza-item-about-label-main{
+        display: inline-block;
+      }
+
+      .pizza-item-about-label-size{
+        display: inline-block;
+        margin-left: 5px;
+      }
+
+    }
+
+    .pizza-item-about-info{
+      display: flex;
+      height: 33%;
+      margin: 5%;
+      margin-left: 7%;
+      font-size: 12px;
+
+      .pizza-item-about-info-size{
+        display: inline-block;
+        margin-right: 10%;
+
+        .pizza-item-about-info-size-img{
+          display: inline-block;
+
+        }
+
+        .pizza-item-about-info-size-amount{
+          display: inline-block;
+        }
+
+      }
+
+      .pizza-item-about-info-weight{
+        display: inline-block;
+
+        .pizza-item-about-info-weight-img{
+          display: inline-block;
+        }
+
+        .pizza-item-about-info-weight-amount{
+          display: inline-block;
+        }
+
+      }
+
+    }
+
+    .pizza-item-about-change{
+      display: flex;
+      height: 33%;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 5%;
+      margin-left: 7%;
+
+      .pizza-item-about-change-sum{
+        display: inline-flex;
+        margin-top: 2px;
+        margin-right: 7%;
+
+        .pizza-item-about-change-sum-amount{
+          display: inline-flex;
+        }
+
+        .pizza-item-about-change-sum-label{
+          display: inline-flex;
+        }
+
+      }
+
+      .pizza-item-about-change-minus{
+        display: inline-flex;
+        position: relative;
+        width: @button-size;
+        height: @button-size;
+        margin-right: 5%;
+        background: #ff6d54;
+        border: #bebebe solid 0.5px;
+        border-radius: 50%;;
+        color: white;
+        font-size: large;
+        box-shadow: 2px 2px 0px rgba(198, 198, 198, 0.49);
+
+        .pizza-item-about-change-minus-label{
+          position: absolute;
+          right: 9px;
+          bottom: 0.5px;
+        }
+
+      }
+
+      .pizza-item-about-change-amount{
+        display: inline-flex;
+        position: relative;
+        margin-right: 10%;
+
+        .pizza-item-about-change-amount-label{
+          display: inline-flex;
+          position: absolute;
+          bottom: 1px;
+        }
+      }
+
+      .pizza-item-about-change-plus{
+        display: inline-flex;
+        position: relative;
+        width: @button-size;
+        height: @button-size;
+        margin-right: 12%;
+        background: #73cf28;
+        border: #bebebe solid 0.5px;
+        border-radius: 50%;
+        color: white;
+        font-size: large;
+        box-shadow: 2px 2px 0px rgba(198, 198, 198, 0.49);
+
+        .pizza-item-about-change-plus-label{
+          position: absolute;
+          right: 6px;
+          bottom: 0.5px;
+          top:0.5px;
+        }
+      }
+
+      .pizza-item-about-change-delete{
+        display: inline-flex;
+        position: relative;
+        width: @button-size;
+        height: @button-size;
+        background: #efefef;
+        border: #bebebe solid 0.5px;
+        border-radius: 50%;
+        color: #ffb138;
+        font-size: larger;
+        box-shadow: 2px 2px 0px rgba(198, 198, 198, 0.49);
+
+        .pizza-item-about-change-delete-label{
+          position: absolute;
+          right: 7px;
+          bottom: 2px;
+        }
+      }
+
+    }
+
+  }
+
+  .pizza-item-img{
+    display: inline-block;
+    float: right;
+    margin-right: -55px;
+    margin-top: 5px;
+    width: 35%;
+    height: 90%;
+  }
+
+}
+

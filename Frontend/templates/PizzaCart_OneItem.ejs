@@ -1,9 +1,82 @@
-<div>
-    <%= pizza.title %> (<%= size %>)
-    <div>Ціна: <%= pizza[size].price %> грн.</div>
-    <div>
-        <button class="btn btn-danger minus">-</button>
-        <span class="label label-default"><%= quantity %></span>
-        <button class="btn btn-success plus">+</button>
+
+
+<div class="pizza-item">
+
+    <div class="pizza-item-about">
+
+        <div class="pizza-item-about-label">
+            <div class="pizza-item-about-label-main">
+                <%= pizza.title%>
+            </div>
+            <div class="pizza-item-about-label-size">
+                <%if(size== "small_size"){%>
+                    (Мала)
+                <% } else if (size== "big_size") {%>
+                    (Велика)
+                <%}%>
+            </div>
+        </div>
+
+        <div class="pizza-item-about-info">
+            <div class="pizza-item-about-info-size">
+                <div class="pizza-item-about-info-size-img">
+                    <img src="assets/images/size-icon.svg">
+                </div>
+                <div class="pizza-item-about-info-size-amount">
+                    <%= pizza[size].size%>
+                </div>
+            </div>
+            <div class="pizza-item-about-info-weight">
+                <div class="pizza-item-about-info-weight-img">
+                    <img src="assets/images/weight.svg">
+                </div>
+                <div class="pizza-item-about-info-weight-amount">
+                    <%= pizza[size].weight%>
+                </div>
+            </div>
+        </div>
+
+        <div class="pizza-item-about-change">
+
+            <div class="pizza-item-about-change-sum">
+                <div class="pizza-item-about-change-sum-amount">
+                    <%= pizza[size].price%>
+                </div>
+                <div class="pizza-item-about-change-sum-label">
+                    грн
+                </div>
+            </div>
+
+            <button class="pizza-item-about-change-minus">
+                        <span class="pizza-item-about-change-minus-label">
+                            -
+                        </span>
+            </button>
+
+            <div class="pizza-item-about-change-amount">
+                <div class="pizza-item-about-change-amount-label">
+                    <%= quantity%>
+                </div>
+            </div>
+
+            <button class="pizza-item-about-change-plus">
+                        <span class="pizza-item-about-change-plus-label">
+                            +
+                        </span>
+            </button>
+
+            <button class="pizza-item-about-change-delete">
+                        <span class="pizza-item-about-change-delete-label">
+                            x
+                        </span>
+            </button>
+
+        </div>
+
     </div>
+
+    <img src="<%= pizza.iconV%>" class="pizza-item-img">
+
 </div>
+
+    

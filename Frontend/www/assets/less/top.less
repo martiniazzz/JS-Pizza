@@ -1,0 +1,95 @@
+
+.top{
+  height: @top-label;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: @right-panel-width;
+  background: rgba(0,0,0,0.7);
+}
+
+.top-flag{
+  height: @top-label;
+  width: @top-label + 20;
+  margin-left: 15px;
+  background: #EA862E;
+  color: white;
+  padding-top: 15px;
+}
+
+.top-flag-pizza{
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-flag-kma{
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-flag-shape{
+  width: @top-label + 20;
+  height: @top-label/3;
+  margin-left: 15px;
+  margin-top: -1px;
+  transform: rotate(180deg);
+}
+
+.top-label{
+  margin-left: @top-label + 50px;
+  margin-top: -@top-label - 15px;
+}
+
+.top-label-style{
+  display: inline-block;
+  margin-right: 20px;
+  color: #cfcfcf;
+}
+
+.top-number{
+  font-size: 20px;
+}
+
+.top-sc{
+  font-size: 15px;
+}
+
+.top-free{
+  font-size: 17px;
+}
+
+.top-label-button{
+  float: right;
+  display: inline-flex;
+  margin-right: 10px;
+  padding: 10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  background: #ffb138;
+  color: white;
+  border-radius: 5px;
+  border: solid 1px #db8e00;
+}
+
+.top-label-line{
+  border: solid 1px #9a9a9a;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+
+.top-label-pizza{
+  color: white;
+  margin-top: 2px;
+}
+
+@media (max-width: 700px) {
+
+  .top-number{
+    font-size: 15px;
+  }
+
+}

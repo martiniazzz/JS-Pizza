@@ -1,0 +1,140 @@
+@import "pizza/pizza-item";
+
+@right-panel-width: 300px;
+
+@top-label: 78px;
+@bottom: 90px;
+
+.main-buylist{
+  position: relative;
+  width: @right-panel-width;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: -3px 1px 8px -1px  rgba(156, 168, 168, 0.66);
+  -moz-box-shadow:    -3px 1px 8px -1px  rgba(156, 168, 168, 0.66);
+  box-shadow:         -3px 1px 8px -1px  rgba(156, 168, 168, 0.66);
+
+  .main-buylist-head{
+    position: absolute;
+    width: 100%;
+    height: @top-label;
+    padding-top: 10px;
+    background: white;
+
+    .main-buylist-head-orderAndAmount{
+      display: inline-block;
+      font-weight: bold;
+      margin: 15px;
+
+      .main-buylist-head-order{
+        display: inline-block;
+        font-size: 18px;
+      }
+
+      .main-buylist-head-amount{
+        display: inline-block;
+        font-size: 10px;
+        padding: 7px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        background: orange;
+        color: white;
+        border-color: #be7900;
+        border-radius: 50%;
+      }
+    }
+
+    .main-buylist-head-clear-cont{
+      display: inline-block;
+      font-size: 10px;
+      color: #9a9a9a;
+    }
+
+    .main-buylist-head-clear{
+      border: none;
+      background: none;
+    }
+
+  }
+
+  .main-buylist-body{
+    width: 100%;
+    height: 100%;
+    padding-top: @top-label;
+    padding-bottom: @top-label;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #f0f0f0;
+  }
+
+  .main-buylist-bottom{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: @bottom;
+    background: white;
+    display: flex;
+    align-items: center;
+
+
+    .main-buylist-bottom-label{
+      padding-left: 10%;
+      font-weight: bold;
+
+      .main-buylist-bottom-label-l{
+        margin-top: -7%;
+
+      }
+
+      .main-buylist-bottom-text{
+        display: inline-block;
+        margin-left: -7%;
+      }
+
+      .main-buylist-bottom-sum{
+        float: right;
+        margin-right: -7%;
+        display: inline-block;
+
+        .main-buylist-bottom-sum-number{
+          display: inline-block;
+        }
+
+        .main-buylist-bottom-sum-text{
+          display: inline-block;
+        }
+
+      }
+
+      .main-buylist-bottom-button-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+      }
+
+      .main-buylist-bottom-button{
+        color: white;
+        font-weight: bold;
+        width: @right-panel-width - 60px;
+        height: 30px;
+        background: #ffb138;
+        border-radius: 5px;
+        border: solid 1px #d18700;
+      }
+
+    }
+
+
+
+  }
+
+}
+
+
+

@@ -1,10 +1,125 @@
 .pizza-card {
+
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+
+
   img {
-    max-width: 250px;
+    width: 250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   h3 {
+    margin-top: 0;
     color: @mainColor;
-    background-color: lighten(@mainColor, 45%);
+    font-weight: bold;
   }
+
+  .caption-type{
+    margin-bottom: 0;
+    color: #bbbbbb;
+  }
+
+  .caption-description{
+    margin-top: -5px;
+  }
+
+  .caption-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .caption-info-small{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .caption-info-big{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .caption-info-text{
+    display: inline-block;
+  }
+
+  .caption-info-pict{
+    display: inline-block;
+    width: 10px;
+  }
+
+  .caption-prices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .caption-prices-small{
+    width: 50%;
+  }
+
+  .caption-prices-big{
+    width: 50%;
+  }
+
+  .caption-prices-price{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .caption-prices-text{
+    font-size:14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .caption-prices-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .caption-prices-small-button{
+    padding: 10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    background: #ffb138;
+    color: white;
+    border-radius: 5px;
+    border: solid 1px #d18700;
+  }
+
+  .caption-prices-big-button{
+    padding: 10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    background: #ffb138;
+    color: white;
+    border-radius: 5px;
+    border: solid 1px #d18700;
+  }
+
+}
+
+.announce{
+  position: absolute;
+  padding: 10px;
+  font-size: 14px;
+  top: -10px;
+  right: -10px;
 }
