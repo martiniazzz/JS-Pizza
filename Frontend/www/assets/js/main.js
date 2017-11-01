@@ -249,8 +249,6 @@ var $clear = $("#clear-cart");
 
 function addToCart(pizza, size) {
     //Додавання однієї піци в кошик покупок
-
-    //Приклад реалізації, можна робити будь-яким іншим способом
     var isInCart = findPizza(pizza,size);
 
     if(isInCart==-1){
@@ -269,7 +267,7 @@ function addToCart(pizza, size) {
 
 function findPizza(pizza,size) {
     for(var i=0;i<Cart.length;i++)
-        if(Cart[i].pizza === pizza && Cart[i].size === size){
+        if(Cart[i].pizza.title == pizza.title && Cart[i].size == size){
             return i;
         }
     return -1;
@@ -283,6 +281,7 @@ function removeFromCart(cart_item) {
             temp.push(Cart[i]);
     Cart = temp;
 
+    localStorage.setItem("Cart",JSON.stringify(Cart));
     //Після видалення оновити відображення
     updateCart();
 }
@@ -298,11 +297,15 @@ function initialiseCart() {
 
     $clear.click(function () {
         clearCart();
+        localStorage.clear();
     });
 
-    var saved_cart = localStorage.getItem("Cart");
-    if(saved_cart)
-        Cart = localStorage.getItem("Cart");
+    var saved_cart = JSON.parse(localStorage.getItem("Cart"));
+    if(saved_cart){
+        for(var i=0;i<saved_cart.length;i++){
+            Cart.push(saved_cart[i]);
+        }
+    }
 
     updateCart();
 }
@@ -329,7 +332,7 @@ function updateCart() {
     //Тут можна наприклад показати оновлений кошик на екрані та зберегти вміт кошика в Local Storage
 
     //Очищаємо старі піци в кошику
-    $cart.html("");
+    $cart.html($("#empty-buylist"));
     $("#buylistAmount").text("0");
     $("#allSum").text("0");
 
@@ -365,20 +368,23 @@ function updateCart() {
 
     }
 
+
     Cart.forEach(showOnePizzaInCart);
 
     $("#allSum").text(countSumm());
+
     if(Cart.length==0){
         $summ_label.hide();
         $summ_button.prop("disabled",true);
+        $("#empty-buylist").show();
     }
-
     else{
         $summ_label.show();
         $summ_button.prop("disabled",false);
+        $("#empty-buylist").hide();
+        localStorage.setItem("Cart", JSON.stringify(Cart));
     }
 
-    localStorage.setItem("Cart", Cart);
     //Storage.write("Cart",Cart);
 
 
