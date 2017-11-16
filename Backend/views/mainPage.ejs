@@ -1,0 +1,70 @@
+
+
+<div class="main-pizza">
+
+    <div class="inner-container">
+
+        <div class="inner-container-head">
+
+            <div class="inner-container-head-label">
+                <span class="inner-container-head-label-text">
+                    Усі піци
+                </span>
+                <span class="inner-container-head-label-number" id="amountOfPizza">
+                    0
+                </span>
+            </div>
+
+            <div class="container-fluid inner-container-head-menu">
+
+                <div class="row">
+
+                    <button class="inner-container-head-menu-item inner-container-head-menu-chosen" id="allPizza">
+                        Усі
+                    </button>
+                    <button class="inner-container-head-menu-item" id="meatPizza">
+                        М'ясні
+                    </button>
+                    <button class="inner-container-head-menu-item" id="pineapplePizza">
+                        З ананасом
+                    </button>
+                    <button class="inner-container-head-menu-item" id="mushroomPizza">
+                        З грибами
+                    </button>
+                    <button class="inner-container-head-menu-item" id="seafoodPizza">
+                        З морепродуктами
+                    </button>
+                    <button class="inner-container-head-menu-item" id="vegaPizza">
+                        Вега
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="inner-container-body">
+
+            <div class="container-fluid">
+
+                <div class="row" id="pizza_list">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <% include common/pageBottom.ejs %>
+
+
+    </div>
+
+</div>
+
+<% include common/header.ejs %>
+
+<% include common/footer.ejs %>
+
+<% include common/cart.ejs %>

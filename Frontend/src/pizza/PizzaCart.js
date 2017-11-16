@@ -2,6 +2,7 @@
  * Created by chaika on 02.02.16.
  */
 var Templates = require('../Templates');
+var API = require('../API');
 
 //Перелік розмірів піци
 var PizzaSize = {
@@ -17,6 +18,7 @@ var $cart = $("#cart");
 var $summ_label = $(".main-buylist-bottom-label-l");
 var $summ_button = $(".main-buylist-bottom-button");
 var $clear = $("#clear-cart");
+var $button = $('#cart-button');
 
 function addToCart(pizza, size) {
     //Додавання однієї піци в кошик покупок
@@ -146,18 +148,15 @@ function updateCart() {
 
     if(Cart.length==0){
         $summ_label.hide();
-        $summ_button.prop("disabled",true);
+        $summ_button.addClass("disabled-button");
         $("#empty-buylist").show();
     }
     else{
         $summ_label.show();
-        $summ_button.prop("disabled",false);
+        $summ_button.removeClass("disabled-button");
         $("#empty-buylist").hide();
         localStorage.setItem("Cart", JSON.stringify(Cart));
     }
-
-    //Storage.write("Cart",Cart);
-
 
 }
 

@@ -1,0 +1,72 @@
+
+<div class="pizza-item">
+
+    <div class="pizza-item-about">
+
+        <div class="pizza-item-about-label">
+            <div class="pizza-item-about-label-main">
+                <%= pizza.title%>
+            </div>
+            <div class="pizza-item-about-label-size">
+                <%if(size== "small_size"){%>
+                (Мала)
+                <% } else if (size== "big_size") {%>
+                (Велика)
+                <%}%>
+            </div>
+        </div>
+
+        <div class="pizza-item-about-info">
+            <div class="pizza-item-about-info-size">
+                <div class="pizza-item-about-info-size-img">
+                    <img src="assets/images/size-icon.svg">
+                </div>
+                <div class="pizza-item-about-info-size-amount">
+                    <%= pizza[size].size%>
+                </div>
+            </div>
+            <div class="pizza-item-about-info-weight">
+                <div class="pizza-item-about-info-weight-img">
+                    <img src="assets/images/weight.svg">
+                </div>
+                <div class="pizza-item-about-info-weight-amount">
+                    <%= pizza[size].weight%>
+                </div>
+            </div>
+        </div>
+
+        <div class="pizza-item-about-change">
+
+            <div class="pizza-item-about-change-sum">
+                <div class="pizza-item-about-change-sum-amount">
+                    <%= pizza[size].price%>
+                </div>
+                <div class="pizza-item-about-change-sum-label">
+                    грн
+                </div>
+            </div>
+
+
+            <div class="pizza-item-about-change-amount">
+                <div class="pizza-item-about-change-amount-label">
+                    <%= quantity%>
+                </div>
+                <div class="pizza-item-about-change-amount-grn undisplay-element">
+                    <%if(quantity== 1){%>
+                    піцa
+                    <% } else if (quantity== 2 || quantity==3 || quantity==4) {%>
+                    піци
+                    <%} else {%>
+                    піц
+                    <%}%>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <img src="<%= pizza.iconV%>" class="pizza-item-img">
+
+</div>
